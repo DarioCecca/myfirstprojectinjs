@@ -1,0 +1,86 @@
+body,html{ height:100%}
+
+/*HEADER*/
+header{
+     height:100%;
+    background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)),url(images/header-img.jpeg) no-repeat center center/cover;
+    }
+/*end header*/
+
+/*BANNER*/
+.banner{
+    position:absolute; 
+    width:80%;
+    left:10%;
+    top:40%;
+
+}
+
+.banner-heading
+{
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-delay: .3s;
+    animation-fill-mode: both;
+}
+
+.banner-par
+{
+    animation-name: anim;
+    animation-duration: 3s;
+    animation-delay: .4s;
+    animation-fill-mode: both;
+}
+
+
+@keyframes anim
+{
+    0%{transform: translateX(-100%);opacity:0; }
+
+    100%{transform: translateX(0);opacity:1; }
+}
+/*end banner*/
+
+/*NAV*/
+.nav-menu {
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+    padding: 30px;
+    transition: all .7s;
+  }
+
+  .cust-nav
+  {background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7));
+    padding:5px 30px;
+  }
+
+  .menu-item {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #eee;
+    transition: color .5s;
+  }
+
+  .menu-item:hover {
+    color: #70aed2;
+  }
+
+  .line1, .line2, .line3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+  }
+
+
+  .change .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .change .line2 {
+    opacity: 0;
+  }
+  
+  .change .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+/*end nav*/

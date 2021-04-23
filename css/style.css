@@ -1,0 +1,34 @@
+*{margin:0; padding:0}
+
+body,html{height:100%}
+#did{margin:auto;  width:600px;}
+#container
+{
+    margin:auto;
+    width:600px;
+    min-height: 500px; 
+    position: relative; 
+    overflow:hidden
+}
+
+#container #slide
+{ 
+    min-height: 500px; 
+    display:flex; 
+   /* transition: all 1s .5s;*/
+}
+#container #slide li
+{
+    width:600px;
+    list-style-type: none;
+}
+
+#container #slide li img
+{
+    width:100%; 
+    height:auto
+}
+#thumbs{ display:flex; margin:auto}
+#thumbs li{width:80px; list-style-type: none;}
+#thumbs li img{width:100%; height:auto}
+

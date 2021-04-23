@@ -1,0 +1,101 @@
+<html>
+
+    <head>
+    <title>
+        ScrollSlide
+        </title>
+        <link href="css/style2.css" rel="stylesheet">
+    </head>
+    
+    <body>
+    
+        <nav>
+            <a href="logo">Logo</a>
+     <ul>
+         <li><a href="#">Area1</a></li>   
+         <li><a href="#">Area2</a></li>   
+         <li><a href="#">Area3</a></li>  
+         <li><a href="#">Area4</a></li>   
+            </ul>   
+        
+        </nav>
+        <div id="container">
+        <section class="area">
+        <h1>Area1</h1>
+        </section>
+        <section class="area">
+         <h1>Area2</h1>
+        </section>
+        <section class="area">
+         <h1>Area3</h1>
+        </section>
+        <section class="area">
+         <h1>Area4</h1>
+        </section>
+    </div>
+    <span id ="up">Torna Su</span>
+    </body>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+    
+    
+    <script>
+    $(document).ready(function(){
+        
+        $("#up").click(function(){
+            
+        $("body,html").animate({scrollTop:0},1000,"easeInOutSine")
+           })      
+            
+       
+        
+        $(window).scroll(function(){
+            
+            
+    var top = $(this).scrollTop();
+            
+           // console.log(top);
+            
+            if(top>370)
+     $("ul li a").css("color","red");
+            
+            else
+      $("ul li a").css("color","#fff");          
+            
+        })
+        
+      
+        $("ul li a").each(function(k,v){
+            
+            $(this).attr("href","#"+k); 
+            
+           $(this).click(function(){
+             
+               var ide =$(this).attr("href");
+               
+           // alert(ide);
+               
+    var pos =$(ide).offset().top-$("nav").height();
+       //  alert(pos); 
+
+    
+               
+    $("body,html").animate({scrollTop:pos},1000,"easeInOutSine")
+           }) 
+            
+        });
+        
+        $(".area").each(function(k,v){
+            
+            $(this).attr("id",k);    
+            
+        })
+        
+    })
+    
+    
+    
+    </script>
+
+</html>
